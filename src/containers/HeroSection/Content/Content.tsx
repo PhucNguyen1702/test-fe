@@ -12,18 +12,13 @@ const Content = () => {
 
       <div className="max-w-[800px] absolute top-0 z-20">
         <div className="flex flex-col text-center">
-          <p className="text-[80px] font-extrabold text-white mb-2 font-playfair max-md:hidden">
-            {t("heroSection.we")} {t("heroSection.ready")}
-          </p>
-
-          <div className="hidden max-md:flex flex-col">
-            <p className="text-[40px] font-extrabold text-white mb-1 font-playfair">
-              {t("heroSection.we")}
-            </p>
-            <p className="text-[40px] font-extrabold text-white font-playfair">
-              {t("heroSection.ready")}
-            </p>
-          </div>
+          <h1 className="text-[80px] font-extrabold text-white mb-2 font-playfair max-md:text-[40px] max-md:mb-1">
+            {t("heroSection.we")}
+            <span className="hidden max-md:inline">
+              <br />
+            </span>
+            {t("heroSection.ready")}
+          </h1>
         </div>
 
         <CountdownTimer targetDate="2025-04-01T00:00:00" />

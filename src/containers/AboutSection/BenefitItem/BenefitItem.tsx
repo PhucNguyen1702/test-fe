@@ -9,7 +9,7 @@ const BenefitItem: React.FC<Props> = ({ icon, title, description }) => {
       <img
         src={icon}
         alt={`${title} icon`}
-        className="object-contain shrink-0 self-start aspect-[0.98] w-[50px]"
+        className="object-contain shrink-0 self-start aspect-[0.98] w-[50px] transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-6"
       />
       <div className="flex flex-col grow shrink-0 basis-0 w-fit">
         <h3 className="self-start text-2xl font-bold leading-none text-black text-left">

@@ -45,7 +45,7 @@ const Footer = () => {
                     </h3>
                     <div className="flex gap-2 items-start mt-10 max-w-full leading-5 text-white w-[410px]">
                       <div className="flex shrink-0 w-10 h-10">
-                        <img src={IMAGES.location} />
+                        <img src={IMAGES.location} alt={"Location"} />
                       </div>
                       <address className="min-w-60 w-[362px] not-italic text-left">
                         <p> {t("footer.usLocation")}</p>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </div>
                     <div className="flex overflow-hidden gap-2 items-center self-start mt-10 leading-snug text-white">
                       <div className="flex shrink-0 self-stretch my-auto w-10 h-10">
-                        <img src={IMAGES.mobile} />
+                        <img src={IMAGES.mobile} alt={"Mobile"} />
                       </div>
                       <p className="self-stretch my-auto">(+1) 555-0108-000</p>
                       <p className="self-stretch my-auto">{t("footer.or")}</p>
@@ -73,11 +73,7 @@ const Footer = () => {
                       {t("footer.registerInfo")}
                     </p>
                     <div className="mt-3 text-base leading-none text-black whitespace-nowrap">
-                      <div className="w-full rounded-lg border border-solid">
-                        <div className="flex gap-2 items-center px-3.5 w-full">
-                          <input className="overflow-hidden flex-1 shrink gap-0.5 self-stretch py-5 my-auto w-full basis-0 min-w-60 bg-transparent text-white" />
-                        </div>
-                      </div>
+                      <input className="overflow-hidden flex-1 shrink gap-0.5 self-stretch py-5  w-full basis-0 min-w-60 bg-white text-white rounded-xl" />
                     </div>
                   </div>
                 </div>

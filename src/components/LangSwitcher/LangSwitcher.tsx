@@ -24,7 +24,7 @@ const LanguageSwitcher: React.FC<Props> = ({ mobileDrawerOpen }) => {
         onClick={toggleDropdown}
         className="flex items-center px-4 py-2 bg-transparent "
       >
-        <img src={currentLanguage.flag} />
+        <img src={currentLanguage.flag} alt={"Flag"} />
         {!isOpen ? (
           <MdArrowDropUp
             size={24}
@@ -47,10 +47,11 @@ const LanguageSwitcher: React.FC<Props> = ({ mobileDrawerOpen }) => {
               className="flex items-center w-full px-4 py-2 hover:bg-gray-200 rounded-md z-50"
             >
               <img
+                alt={"Tick"}
                 src={IMAGES.tickIcon}
                 className={`w-5 h-5 mr-3 ${i18n.language !== lang.code ? "invisible" : ""}`}
               />
-              <img src={lang.flag} />
+              <img src={lang.flag} alt={"Flag"} />
               <span className={"text-black font-bold text-[10px] ml-2"}>
                 {lang.label}
               </span>

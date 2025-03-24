@@ -3,6 +3,7 @@ import { navItems } from "@config/common.ts";
 import logo from "@assets/icon/logo.svg";
 import { useTranslation } from "react-i18next";
 import { LangSwitcher } from "../LangSwitcher";
+import { useNavigate } from "react-router-dom";
 
 interface NavbarProps {
   toggleNavbar: () => void;
@@ -10,6 +11,7 @@ interface NavbarProps {
 
 const Navbar = ({ toggleNavbar }: NavbarProps) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <nav className="sticky top-0 z-50 py-3">
@@ -25,7 +27,12 @@ const Navbar = ({ toggleNavbar }: NavbarProps) => {
           <ul className="hidden lg:flex ml-14 space-x-12 items-center">
             {navItems.map((item, index) => (
               <li key={index} className="font-bold text-sm">
-                <a href={item.href}>{t(item.label)}</a>
+                <button
+                  onClick={() => navigate("/*")}
+                  className="hover:underline"
+                >
+                  {t(item.label)}
+                </button>{" "}
               </li>
             ))}
             <LangSwitcher />
